@@ -1,0 +1,6 @@
+--
+UPDATE "DB"."DBA"."HTTP_PATH"
+SET "HP_SECURITY" = 'basic', "HP_REALM" = 'SPARQL', "HP_AUTH_FUNC" = 'DB.DBA.HP_AUTH_SPARQL_USER'
+WHERE ("HP_LPATH" = '/sparql') OR ("HP_LPATH" = '/sparql-auth') OR ("HP_LPATH" = '/sparql-graph-crud') OR ("HP_LPATH" = '/sparql-graph-crud-auth') ;
+CHECKPOINT;
+--

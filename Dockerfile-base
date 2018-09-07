@@ -1,0 +1,7 @@
+FROM openlink/virtuoso_opensource:v07.20.3217
+COPY virtuoso_base.ini /opt/virtuoso-opensource/database/virtuoso.ini
+COPY secure_sparql.isql /secure_sparql.isql
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+EXPOSE 8890
+EXPOSE 1111
+ENTRYPOINT ["/docker-entrypoint.sh"]

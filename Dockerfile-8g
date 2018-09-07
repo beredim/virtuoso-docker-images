@@ -1,0 +1,2 @@
+FROM beredim/virtuoso:base
+COPY virtuoso_8g.ini /opt/virtuoso-opensource/database/virtuoso.ini
